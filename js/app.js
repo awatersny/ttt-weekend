@@ -16,15 +16,9 @@ const boardSq = document.querySelectorAll(".square");
 
 
 /*-------------------------------- Functions --------------------------------*/
+function init(){
 
-// 2) Store cached element references on the page that will be accessed in code more than once in variables to make code more concise, readable, and performant:
-	
-	// 2.1) Store the 9 elements that represent the squares on the page.
-	  // You may want to give each square a class name in your HTML to make this easier!
-
-	// 2.2) Store the element that displays the game status on the page.
-
-
+}
 // 3) Upon loading, the app should:
 
 	// 3.1) Call an initialize function
@@ -115,6 +109,7 @@ const boardSq = document.querySelectorAll(".square");
 	// 6.2) Store the new replay button element
 
 	// 6.3) Do steps 4.1 (initialize the state variables) and 4.2 (render).
+  init();
   console.log(squares);
   console.log(turn);
   console.log(winner);
