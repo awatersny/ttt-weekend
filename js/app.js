@@ -71,16 +71,9 @@ function render() {
 }
 
 function handleClick(evt) {
-
-}
-// 5) Next, the app should wait for the user to click a square and call a handleClick function
-  // the handleClick function will...
-
 	// 5.1) Obtain the index of the square that was clicked by:
 	  // 5.1.1) "Extracting" the index from an id assigned to the element in the HTML 
-		// Hint: Each id seems to correspond with an index in our board array. How could these be used if
-		// we cleaned them up a bit?
-
+  console.log(parseInt(evt.target.id[2], 10));
 	// 5.2) If the board has a value at the index, immediately return because that square is already taken.
 
 	// 5.3) If winner is not null, immediately return because the game is over.
@@ -114,6 +107,7 @@ function handleClick(evt) {
 		// 5.6.5) Otherwise return null.
 
 // 5.7) All state has been updated, so render the state to the page (step 3.3).
+}
 
 
 // 6) Handle a player clicking the replay button:
