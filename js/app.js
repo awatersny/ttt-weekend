@@ -1,5 +1,19 @@
 /*-------------------------------- Constants --------------------------------*/
+// 4) Define the required constants:
 
+	// 4.1) Define the 8 possible winning combinations as an array of arrays.
+	  // Each array will contain three indexes of the board that make a winner if they hold the same player value. 
+		// If you are having trouble with this step, feel free to check out the winningCombos array in the solution code. 
+const winningCombos = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+];
 
 
 /*---------------------------- Variables (state) ----------------------------*/
@@ -18,7 +32,7 @@ const boardSqs = document.querySelectorAll(".square");
 /*-------------------------------- Functions --------------------------------*/
 function init(){
   // 3.2.1) Initialize the board array to 9 nulls to represent empty squares.
-    squares = [, null, null, null, null, null, null, null, null];
+    squares = [null, null, null, null, null, null, null, null, null];
   // 3.2.2) Initialize whose turn it is to 1 (player 'X'). 
     turn = 1;
   // 3.2.3) Initialize the winner variable to null.
@@ -56,17 +70,7 @@ function render() {
       }
     }
   });
-
-  // 3.4) After completing this step, you should be able to manually change the values held in the board array in the initialization function and see the style of the corresponding square change on your page.
 }
-
-
-
-// 4) Define the required constants:
-
-	// 4.1) Define the 8 possible winning combinations as an array of arrays.
-	  // Each array will contain three indexes of the board that make a winner if they hold the same player value. 
-		// If you are having trouble with this step, feel free to check out the winningCombos array in the solution code. 
 
 
 // 5) Next, the app should wait for the user to click a square and call a handleClick function
