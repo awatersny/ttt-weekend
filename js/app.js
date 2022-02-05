@@ -72,7 +72,9 @@ function render() {
   });
 }
 
-
+function handleClick() {
+  
+}
 // 5) Next, the app should wait for the user to click a square and call a handleClick function
   // the handleClick function will...
 
