@@ -71,13 +71,16 @@ function render() {
 }
 
 function handleClick(evt) {
+	// 5.3) If winner is not null, immediately return because the game is over.
+  if (winner) {
+    console.log("Game Over");
+    return;
+  }
 	// 5.2) If the board has a value at the index, immediately return because that square is already taken.
   if (squares[parseInt(evt.target.id[2], 10)]) {
     console.log("Square Taken");
     return;
   }
-	// 5.3) If winner is not null, immediately return because the game is over.
-  
 	// 5.4) Update the board array at the index with the value of turn.
 
 	// 5.5) Change the turn by multiplying turn by -1 (this flips a 1 to -1, and vice-versa).
