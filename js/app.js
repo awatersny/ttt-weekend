@@ -85,7 +85,7 @@ function handleClick(evt) {
   squares[parseInt(evt.target.id[2], 10)] = turn;
   console.log(squares);
 	// 5.5) Change the turn by multiplying turn by -1 (this flips a 1 to -1, and vice-versa).
-
+  turn = turn === 1 ? -1 : 1;
 	// 5.6) Set the winner variable if there's a winner by calling a new function: getWinner.
 	  // The getWinner function will...
 
