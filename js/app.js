@@ -85,33 +85,38 @@ function handleClick(evt) {
   squares[parseInt(evt.target.id[2], 10)] = turn;
 	// 5.5) Change the turn by multiplying turn by -1 (this flips a 1 to -1, and vice-versa).
   turn = turn === 1 ? -1 : 1;
-	// 5.6) Set the winner variable if there's a winner by calling a new function: getWinner.
-	  // The getWinner function will...
-
-	  // 5.6.1) There are a couple methods you can use to find out if there is a winner.
-	   // This is the first, more elegant way that takes advantage of the winningCombos array you wrote above in step 4.
-	   // The 5.6.2 step is a little simpler to comprehend, but you'll need to write a lot more code.
-	   // The 5.6.2 step also won't take advantage of the winningCombos array, but using it as a reference will help you build a solution.
-	   // Choose only one path.
-		  // 5.6.1.1) Loop through the each of the winning combination arrays defined.
-		  // 5.6.1.2) Total up the three board positions using the three indexes in the current combo.
-		  // 5.6.1.3) Convert the total to an absolute value (convert any negative total to positive).
-		  // 5.6.1.4) If the total equals 3, we have a winner! Set the winner variable to the board's value at the index specified by the first index of that winning combination's array by returning that value.
-
-		// 5.6.2) This solution is less elegant, but might be easier to write on your own if you're struggling with the 5.6.1.X pseudocode.
-		  // 5.6.2.1) For each one of the winning combinations you wrote in step 4, find the total of each winning combination.
-		  // 5.6.2.2) Convert the total to an absolute value (convert any negative total to positive)
-		  // 5.6.2.3) If the total equals 3, we have a winner! Set the winner variable to the board's value at the index specified by the first index of that winning combination's array by returning that value.
-
-		// 5.6.3) Next, If there's no winner, check if there's a tie:
-
-		// 5.6.4) Set the winner varible to "T" if there are no more nulls in the board array by returning the string "T".
-	  
-		// 5.6.5) Otherwise return null.
-
+  // 5.6) Set the winner variable if there's a winner by calling a new function: getWinner.
+  getWinner();
 // 5.7) All state has been updated, so render the state to the page (step 3.3).
   render();
 }
+
+function getWinner() {
+
+}
+  // The getWinner function will...
+
+  // 5.6.1) There are a couple methods you can use to find out if there is a winner.
+    // This is the first, more elegant way that takes advantage of the winningCombos array you wrote above in step 4.
+    // The 5.6.2 step is a little simpler to comprehend, but you'll need to write a lot more code.
+    // The 5.6.2 step also won't take advantage of the winningCombos array, but using it as a reference will help you build a solution.
+    // Choose only one path.
+    // 5.6.1.1) Loop through the each of the winning combination arrays defined.
+    // 5.6.1.2) Total up the three board positions using the three indexes in the current combo.
+    // 5.6.1.3) Convert the total to an absolute value (convert any negative total to positive).
+    // 5.6.1.4) If the total equals 3, we have a winner! Set the winner variable to the board's value at the index specified by the first index of that winning combination's array by returning that value.
+
+  // 5.6.2) This solution is less elegant, but might be easier to write on your own if you're struggling with the 5.6.1.X pseudocode.
+    // 5.6.2.1) For each one of the winning combinations you wrote in step 4, find the total of each winning combination.
+    // 5.6.2.2) Convert the total to an absolute value (convert any negative total to positive)
+    // 5.6.2.3) If the total equals 3, we have a winner! Set the winner variable to the board's value at the index specified by the first index of that winning combination's array by returning that value.
+
+  // 5.6.3) Next, If there's no winner, check if there's a tie:
+
+  // 5.6.4) Set the winner varible to "T" if there are no more nulls in the board array by returning the string "T".
+  
+  // 5.6.5) Otherwise return null.
+
 
 
 // 6) Handle a player clicking the replay button:
@@ -121,7 +126,7 @@ function handleClick(evt) {
 	// 6.2) Store the new replay button element
 
 	// 6.3) Do steps 4.1 (initialize the state variables) and 4.2 (render).
-  init();
-  console.log(squares);
-  console.log(turn);
-  console.log(winner);
+init();
+console.log(squares);
+console.log(turn);
+console.log(winner);
