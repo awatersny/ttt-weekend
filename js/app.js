@@ -88,29 +88,29 @@ function handleClick(evt) {
 	// 5.5) Change the turn by multiplying turn by -1 (this flips a 1 to -1, and vice-versa).
   turn = turn === 1 ? -1 : 1;
   // 5.6) Set the winner variable if there's a winner by calling a new function: getWinner.
-  getWinner();
+  setWinner();
+  // console.log(winner);
 // 5.7) All state has been updated, so render the state to the page (step 3.3).
   render();
 }
 
-function getWinner() {
+function setWinner() {
   // 5.6.1.1) Loop through the each of the winning combination arrays defined.
   winningCombos.forEach((combo, idx) => {
     // 5.6.1.2) Total up the three board positions using the three indexes in the current combo.
     // 5.6.1.3) Convert the total to an absolute value (convert any negative total to positive).
+    // 5.6.1.4) If the total equals 3, we have a winner! Set the winner variable to the board's value at the index specified by the first index of that winning combination's array by returning that value.
     if (Math.abs(squares[combo[0]] + squares[combo[1]] + squares[combo[2]]) === 3) {
-
+      winner = squares[combo[0]]
     }
   });
 
-  // 5.6.1.4) If the total equals 3, we have a winner! Set the winner variable to the board's value at the index specified by the first index of that winning combination's array by returning that value.
-
   // 5.6.3) Next, If there's no winner, check if there's a tie:
-
+  
   // 5.6.4) Set the winner varible to "T" if there are no more nulls in the board array by returning the string "T".
   
   // 5.6.5) Otherwise return null.
-
+  return null;
 }
 
 
