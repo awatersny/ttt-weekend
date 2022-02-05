@@ -42,15 +42,19 @@ function render() {
     // 3.3.2.1) If winner has a value other than null (game still in progress), render whose turn it is.
     if (!winner) {
       if (turn === 1) {
-        message.textContent = `X's turn`
+        message.textContent = `It's X's turn!`
       } else if (turn === -1){
-        message.textContent = `O's turn`
+        message.textContent = `It's O's turn!`
+      }
+    } else {
+      if (winner === 1) {
+        message.textContent = `X wins!`
+      } else if (winner === -1) {
+        message.textContent = `O wins!`
+      } else {
+        message.textContent = `It's a tie!`
       }
     }
-      // Hint: Maybe use a ternary inside of a template literal here?
-    // 3.3.2.2) If winner is equal to 'T' (tie), render a tie message.
-    // 3.3.2.3) Otherwise, render a congratulatory message to which player has won.
-      // Hint (again): Maybe use a ternary inside a template literal here
   });
 
   // 3.4) After completing this step, you should be able to manually change the values held in the board array in the initialization function and see the style of the corresponding square change on your page.
