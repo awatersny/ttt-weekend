@@ -106,9 +106,10 @@ function setWinner() {
   });
 
   // 5.6.3) Next, If there's no winner, check if there's a tie:
-  
-  // 5.6.4) Set the winner varible to "T" if there are no more nulls in the board array by returning the string "T".
-  
+  if (squares.every(square => square)) {
+    // 5.6.4) Set the winner varible to "T" if there are no more nulls in the board array by returning the string "T".
+    winner = 'T';
+  }
   // 5.6.5) Otherwise return null.
   return null;
 }
