@@ -30,7 +30,7 @@ board.addEventListener("click", handleClick);
 /*-------------------------------- Functions --------------------------------*/
 function init(){
   // 3.2.1) Initialize the board array to 9 nulls to represent empty squares.
-    squares = [null, null, null, null, null, null, null, null, null];
+    squares = [1, null, null, null, null, null, null, null, null];
   // 3.2.2) Initialize whose turn it is to 1 (player 'X'). 
     turn = 1;
   // 3.2.3) Initialize the winner variable to null.
@@ -71,13 +71,13 @@ function render() {
 }
 
 function handleClick(evt) {
-	// 5.1) Obtain the index of the square that was clicked by:
-	  // 5.1.1) "Extracting" the index from an id assigned to the element in the HTML 
-  console.log(parseInt(evt.target.id[2], 10));
 	// 5.2) If the board has a value at the index, immediately return because that square is already taken.
-
+  if (squares[parseInt(evt.target.id[2], 10)]) {
+    console.log("Square Taken");
+    return;
+  }
 	// 5.3) If winner is not null, immediately return because the game is over.
-
+  
 	// 5.4) Update the board array at the index with the value of turn.
 
 	// 5.5) Change the turn by multiplying turn by -1 (this flips a 1 to -1, and vice-versa).
