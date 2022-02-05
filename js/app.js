@@ -7,8 +7,9 @@ let squares, turn, winner;
 
 
 /*------------------------ Cached Element References ------------------------*/
-
-
+const board = document.querySelector(".board");
+const message = document.getElementById("message");
+const boardSq = document.querySelectorAll(".square");
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -114,3 +115,6 @@ let squares, turn, winner;
 	// 6.2) Store the new replay button element
 
 	// 6.3) Do steps 4.1 (initialize the state variables) and 4.2 (render).
+  console.log(squares);
+  console.log(turn);
+  console.log(winner);
