@@ -83,7 +83,6 @@ function handleClick(evt) {
   }
 	// 5.4) Update the board array at the index with the value of turn.
   squares[parseInt(evt.target.id[2], 10)] = turn;
-  console.log(squares);
 	// 5.5) Change the turn by multiplying turn by -1 (this flips a 1 to -1, and vice-versa).
   turn = turn === 1 ? -1 : 1;
 	// 5.6) Set the winner variable if there's a winner by calling a new function: getWinner.
@@ -111,6 +110,7 @@ function handleClick(evt) {
 		// 5.6.5) Otherwise return null.
 
 // 5.7) All state has been updated, so render the state to the page (step 3.3).
+  render();
 }
 
 
