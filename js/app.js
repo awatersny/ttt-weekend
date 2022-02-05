@@ -30,20 +30,28 @@ function init(){
 function render() {
   // 3.3.1) Loop over the board array (which represents the squares on the page), and for each iteration:
   squares.forEach((square, idx) => {
-    // 3.3.1.1) Use the index of the iteration to access the square in the squares array that corresponds with the current cell being iterated over in the board array
     // 3.3.1.2) Style that square however you wish dependant on the value contained in the current cell being iterated over (-1, 1, or null)
     if (square === 1) {
       boardSqs[idx].textContent = "X";
     } else if (square === -1) {
       boardSqs[idx].textContent = "O";
+    } else {
+      boardSqs[idx].textContent = null;
     }
-  });
-  // 3.3.2) Render a message reflecting the currrent game state:
+    // 3.3.2) Render a message reflecting the currrent game state:
     // 3.3.2.1) If winner has a value other than null (game still in progress), render whose turn it is.
+    if (!winner) {
+      if (turn === 1) {
+        message.textContent = `X's turn`
+      } else if (turn === -1){
+        message.textContent = `O's turn`
+      }
+    }
       // Hint: Maybe use a ternary inside of a template literal here?
     // 3.3.2.2) If winner is equal to 'T' (tie), render a tie message.
     // 3.3.2.3) Otherwise, render a congratulatory message to which player has won.
       // Hint (again): Maybe use a ternary inside a template literal here
+  });
 
   // 3.4) After completing this step, you should be able to manually change the values held in the board array in the initialization function and see the style of the corresponding square change on your page.
 }
