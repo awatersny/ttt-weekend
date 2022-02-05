@@ -30,7 +30,7 @@ board.addEventListener("click", handleClick);
 /*-------------------------------- Functions --------------------------------*/
 function init(){
   // 3.2.1) Initialize the board array to 9 nulls to represent empty squares.
-    squares = [1, null, null, null, null, null, null, null, null];
+    squares = [null, null, null, null, null, null, null, null, null];
   // 3.2.2) Initialize whose turn it is to 1 (player 'X'). 
     turn = 1;
   // 3.2.3) Initialize the winner variable to null.
@@ -82,7 +82,8 @@ function handleClick(evt) {
     return;
   }
 	// 5.4) Update the board array at the index with the value of turn.
-
+  squares[parseInt(evt.target.id[2], 10)] = turn;
+  console.log(squares);
 	// 5.5) Change the turn by multiplying turn by -1 (this flips a 1 to -1, and vice-versa).
 
 	// 5.6) Set the winner variable if there's a winner by calling a new function: getWinner.
