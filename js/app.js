@@ -19,15 +19,13 @@ const winningCombos = [
 /*---------------------------- Variables (state) ----------------------------*/
 let squares, turn, winner;
 
-
 /*------------------------ Cached Element References ------------------------*/
 const board = document.querySelector(".board");
 const message = document.getElementById("message");
 const boardSqs = document.querySelectorAll(".square");
 
 /*----------------------------- Event Listeners -----------------------------*/
-
-
+board.addEventListener("click", handleClick);
 
 /*-------------------------------- Functions --------------------------------*/
 function init(){
@@ -72,8 +70,8 @@ function render() {
   });
 }
 
-function handleClick() {
-  
+function handleClick(evt) {
+
 }
 // 5) Next, the app should wait for the user to click a square and call a handleClick function
   // the handleClick function will...
