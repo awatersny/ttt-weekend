@@ -9,7 +9,7 @@
 */
 
 body {
-  background-color: #888;
+  background-color: #555;
   text-align: center;
 	/* Use a system font, if none are available use an available sans-sarif   font */
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -38,7 +38,7 @@ section.board {
   grid-template-rows: repeat(3, 20vmin);
   grid-template-columns: repeat(3, 20vmin);
   grid-gap: 0vmin;
-  box-shadow: 0 10px 20px black;
+  box-shadow: 0 15px 20px black;
 }
 
 div {
@@ -53,7 +53,7 @@ div {
 
 button {
   background-color: #000;
-  color: white;
+  color: #fff;
   border: 6px outset #2bf;
   margin: 25px auto;
   height: 10vmin;
