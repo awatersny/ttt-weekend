@@ -101,7 +101,7 @@ function setWinner() {
     // 5.6.1.3) Convert the total to an absolute value (convert any negative total to positive).
     // 5.6.1.4) If the total equals 3, we have a winner! Set the winner variable to the board's value at the index specified by the first index of that winning combination's array by returning that value.
     if (Math.abs(squares[combo[0]] + squares[combo[1]] + squares[combo[2]]) === 3) {
-      winner = squares[combo[0]]
+      winner = squares[combo[0]];
     }
   });
 
@@ -113,9 +113,6 @@ function setWinner() {
   // 5.6.5) Otherwise return null.
   return null;
 }
-
-
-
 // 6) Handle a player clicking the replay button:
 
 	// 6.1) Add a replay button to the HTML document
