@@ -27,6 +27,7 @@ const replay = document.getElementById("replay");
 
 /*----------------------------- Event Listeners -----------------------------*/
 board.addEventListener("click", handleClick);
+replay.addEventListener("click", init)
 
 /*-------------------------------- Functions --------------------------------*/
 init();
@@ -40,6 +41,7 @@ function init(){
     winner = null;
   // 3.2.4) Render those state variables to the page by calling a render function.
   render();
+  replay.setAttribute("hidden", true)
 }
 
 function render() {
@@ -93,6 +95,7 @@ function handleClick(evt) {
   // console.log(winner);
 // 5.7) All state has been updated, so render the state to the page (step 3.3).
   render();
+  replay.removeAttribute("hidden");
 }
 
 function setWinner() {
@@ -116,8 +119,6 @@ function setWinner() {
 }
 // 6) Handle a player clicking the replay button:
 
-	// 6.2) Store the new replay button element
-  
 	// 6.3) Do steps 4.1 (initialize the state variables) and 4.2 (render).
 console.log(squares);
 console.log(turn);
