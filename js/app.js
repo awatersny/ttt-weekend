@@ -62,8 +62,10 @@ function render() {
     if (!winner) {
       if (turn === 1) {
         message.textContent = `It's X's turn!`
+        message.style.textShadow = "0 5px 10px #f00";
       } else if (turn === -1){
         message.textContent = `It's O's turn!`
+        message.style.textShadow = "0 5px 10px #77f";
       }
     } else {
       if (winner === 1) {
@@ -80,12 +82,10 @@ function render() {
 function handleClick(evt) {
 	// 5.3) If winner is not null, immediately return because the game is over.
   if (winner) {
-    console.log("Game Over");
     return;
   }
 	// 5.2) If the board has a value at the index, immediately return because that square is already taken.
   if (squares[parseInt(evt.target.id[2], 10)]) {
-    console.log("Square Taken");
     return;
   }
 	// 5.4) Update the board array at the index with the value of turn.
