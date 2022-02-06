@@ -42,7 +42,12 @@ function init(){
     winner = null;
   // 3.2.4) Render those state variables to the page by calling a render function.
   render();
-  replay.setAttribute("hidden", true)
+  replay.setAttribute("hidden", true);
+
+  boardSqs.forEach(square => {
+    square.style.borderColor = "#2bf";
+  });
+
 }
 
 function render() {
@@ -130,6 +135,7 @@ function renderWin( victor ) {
 
   winCombo.forEach(sqIdx => {
     boardSqs[sqIdx].style.color = "#d4af37";
+    boardSqs[sqIdx].style.borderColor = "#d4af37";
   });
 }
 
