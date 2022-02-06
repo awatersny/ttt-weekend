@@ -22,6 +22,7 @@ let squares, turn, winner;
 let winCombo;
 
 /*------------------------ Cached Element References ------------------------*/
+const title = document.getElementById("title");
 const board = document.querySelector(".board");
 const message = document.getElementById("message");
 const boardSqs = document.querySelectorAll(".square");

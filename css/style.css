@@ -45,10 +45,10 @@ div {
   background-color: #000;
   color: #fff;
   border: 12px ridge #2bf;
-  font-size: 14vmin;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 16vmin;
+  font-size: 15vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
@@ -59,8 +59,9 @@ button {
   height: 10vmin;
   width: 20vmin;
   font-size: 5vmin;
-  text-align: center;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 10px 20px #000;
 }
 
