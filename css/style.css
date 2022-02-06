@@ -3,6 +3,7 @@
 *O = #77f
 *X = #f00
 *T = #090
+*border = #2bf
 */
 
 body {
@@ -36,9 +37,9 @@ section.board {
 }
 
 div {
-  background-color: #000000;
-  color: #77f;
-  border: 12px ridge #22bbff;
+  background-color: #000;
+  color: #fff;
+  border: 12px ridge #2bf;
   font-size: 14vmin;
   text-align: center;
   vertical-align: middle;
@@ -48,17 +49,17 @@ div {
 button {
   background-color: #000;
   color: white;
-  border: 6px outset #22bbff;
-  margin: 20px auto;
+  border: 6px outset #2bf;
+  margin: 25px auto;
   height: 10vmin;
   width: 20vmin;
   font-size: 5vmin;
   text-align: center;
   vertical-align: middle;
-  box-shadow: 0 10px 20px black;
+  box-shadow: 0 10px 20px #000;
 }
 
 button:hover {
   border-style: inset;
-  box-shadow: 0 0 0 black;
+  box-shadow: 0 0 0 #000;
 }

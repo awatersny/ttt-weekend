@@ -48,10 +48,13 @@ function render() {
   squares.forEach((square, idx) => {
     // 3.3.1.2) Style that square however you wish dependant on the value contained in the current cell being iterated over (-1, 1, or null)
     if (square === 1) {
+      boardSqs[idx].style.color = "#f00";
       boardSqs[idx].textContent = "X";
     } else if (square === -1) {
+      boardSqs[idx].style.color = "#77f";
       boardSqs[idx].textContent = "O";
     } else {
+      boardSqs[idx].style.color = "#fff";
       boardSqs[idx].textContent = null;
     }
     // 3.3.2) Render a message reflecting the currrent game state:
@@ -99,7 +102,7 @@ function handleClick(evt) {
 
 function setWinner() {
   // 5.6.1.1) Loop through the each of the winning combination arrays defined.
-  winningCombos.forEach((combo, idx) => {
+  winningCombos.forEach(combo => {
     // 5.6.1.2) Total up the three board positions using the three indexes in the current combo.
     // 5.6.1.3) Convert the total to an absolute value (convert any negative total to positive).
     // 5.6.1.4) If the total equals 3, we have a winner! Set the winner variable to the board's value at the index specified by the first index of that winning combination's array by returning that value.
