@@ -61,19 +61,22 @@ function render() {
     // 3.3.2.1) If winner has a value other than null (game still in progress), render whose turn it is.
     if (!winner) {
       if (turn === 1) {
-        message.textContent = `It's X's turn!`
+        message.textContent = `It's X's turn!`;
         message.style.textShadow = "0 5px 10px #f00";
       } else if (turn === -1){
-        message.textContent = `It's O's turn!`
+        message.textContent = `It's O's turn!`;
         message.style.textShadow = "0 5px 10px #77f";
       }
     } else {
       if (winner === 1) {
-        message.textContent = `X wins!`
+        message.textContent = `X wins!`;
+        message.style.textShadow = "0 5px 10px #ffd700";
       } else if (winner === -1) {
-        message.textContent = `O wins!`
+        message.textContent = `O wins!`;
+        message.style.textShadow = "0 5px 10px #ffd700";
       } else {
-        message.textContent = `It's a tie!`
+        message.textContent = `It's a tie!`;
+        message.style.textShadow = "0 5px 10px #0f0";
       }
     }
   });
