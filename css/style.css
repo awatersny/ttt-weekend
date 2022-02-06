@@ -23,6 +23,7 @@ section.board {
   grid-template-rows: repeat(3, 20vmin);
   grid-template-columns: repeat(3, 20vmin);
   grid-gap: 0vmin;
+  box-shadow: 0 10px 20px black;
 }
 
 div {
@@ -38,14 +39,16 @@ button {
   background-color: #000;
   color: white;
   border: 6px outset #22bbff;
-  margin: 10px auto;
+  margin: 20px auto;
   height: 10vmin;
   width: 20vmin;
   font-size: 5vmin;
   text-align: center;
   vertical-align: middle;
+  box-shadow: 0 10px 20px black;
 }
 
 button:hover {
   border-style: inset;
+  box-shadow: 0 0 0 black;
 }

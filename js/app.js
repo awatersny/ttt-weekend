@@ -30,7 +30,6 @@ board.addEventListener("click", handleClick);
 replay.addEventListener("click", init)
 
 /*-------------------------------- Functions --------------------------------*/
-init();
 
 function init(){
   // 3.2.1) Initialize the board array to 9 nulls to represent empty squares.
@@ -117,9 +116,4 @@ function setWinner() {
   // 5.6.5) Otherwise return null.
   return null;
 }
-// 6) Handle a player clicking the replay button:
-
-	// 6.3) Do steps 4.1 (initialize the state variables) and 4.2 (render).
-console.log(squares);
-console.log(turn);
-console.log(winner);
+init();
