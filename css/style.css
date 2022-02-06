@@ -1,3 +1,10 @@
+/**
+*Colors
+*O = #77f
+*X = #f00
+*T = #090
+*/
+
 body {
   background-color: gray;
   text-align: center;
@@ -20,7 +27,7 @@ section.board {
 
 div {
   background-color: #000000;
-  color: #ffffff;
+  color: #77f;
   border: 12px ridge #22bbff;
   font-size: 13vmin;
   text-align: center;
@@ -28,6 +35,17 @@ div {
 }
 
 button {
+  background-color: #000;
+  color: white;
+  border: 6px outset #22bbff;
   margin: 10px auto;
-  width: 70px
+  height: 10vmin;
+  width: 20vmin;
+  font-size: 5vmin;
+  text-align: center;
+  vertical-align: middle;
+}
+
+button:hover {
+  border-style: inset;
 }
