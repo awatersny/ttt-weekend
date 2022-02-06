@@ -80,8 +80,7 @@ function render() {
       } else if (winner === -1) {
         renderWin('O');
       } else {
-        message.textContent = `It's a tie!`;
-        message.style.textShadow = "0 5px 10px #0f0";
+        renderTie();
       }
     }
   });
@@ -139,8 +138,13 @@ function renderWin( victor ) {
   });
 }
 
-function tieColor() {
+function renderTie() {
+  message.textContent = `It's a tie!`;
+  message.style.textShadow = "0 5px 10px #0f0";
 
+  boardSqs.forEach(square => {
+    square.style.borderColor = "#0d0";
+  });
 }
 
 init();
