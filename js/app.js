@@ -18,6 +18,8 @@ const winningCombos = [
 
 /*---------------------------- Variables (state) ----------------------------*/
 let squares, turn, winner;
+//For styling logic
+let winCombo;
 
 /*------------------------ Cached Element References ------------------------*/
 const board = document.querySelector(".board");
@@ -111,6 +113,7 @@ function setWinner() {
     // 5.6.1.4) If the total equals 3, we have a winner! Set the winner variable to the board's value at the index specified by the first index of that winning combination's array by returning that value.
     if (Math.abs(squares[combo[0]] + squares[combo[1]] + squares[combo[2]]) === 3) {
       winner = squares[combo[0]];
+      winCombo = combo;
     }
   });
 
