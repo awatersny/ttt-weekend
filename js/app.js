@@ -23,6 +23,7 @@ let squares, turn, winner;
 const board = document.querySelector(".board");
 const message = document.getElementById("message");
 const boardSqs = document.querySelectorAll(".square");
+const replay = document.getElementById("replay");
 
 /*----------------------------- Event Listeners -----------------------------*/
 board.addEventListener("click", handleClick);
@@ -115,10 +116,8 @@ function setWinner() {
 }
 // 6) Handle a player clicking the replay button:
 
-	// 6.1) Add a replay button to the HTML document
-
 	// 6.2) Store the new replay button element
-
+  
 	// 6.3) Do steps 4.1 (initialize the state variables) and 4.2 (render).
 console.log(squares);
 console.log(turn);
