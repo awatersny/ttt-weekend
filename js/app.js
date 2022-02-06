@@ -71,11 +71,9 @@ function render() {
       }
     } else {
       if (winner === 1) {
-        message.textContent = `X wins!`;
-        message.style.textShadow = "0 5px 10px #ffd700";
+        renderWin('X');
       } else if (winner === -1) {
-        message.textContent = `O wins!`;
-        message.style.textShadow = "0 5px 10px #ffd700";
+        renderWin('O');
       } else {
         message.textContent = `It's a tie!`;
         message.style.textShadow = "0 5px 10px #0f0";
@@ -125,4 +123,18 @@ function setWinner() {
   // 5.6.5) Otherwise return null.
   return null;
 }
+
+function renderWin( victor ) {
+  message.textContent = `${victor} wins!`;
+  message.style.textShadow = "0 5px 10px #ffd700";
+
+  winCombo.forEach(sqIdx => {
+    boardSqs[sqIdx].style.color = "#d4af37";
+  });
+}
+
+function tieColor() {
+
+}
+
 init();
