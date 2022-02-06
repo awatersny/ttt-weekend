@@ -24,7 +24,7 @@ h1 {
   font-size: 10vmin;
   text-shadow: 0 10px 10px #2bf;
   color: #000;
-  margin-bottom: 0;
+  margin: 10px 0 0 0;
 }
 
 #message {
@@ -59,9 +59,8 @@ button {
   height: 10vmin;
   width: 20vmin;
   font-size: 5vmin;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  vertical-align: center;
   box-shadow: 0 10px 20px #000;
 }
 
