@@ -131,6 +131,7 @@ function setWinner() {
 function renderWin( victor ) {
   message.textContent = `${victor} wins!`;
   message.style.textShadow = "0 5px 10px #ffd700";
+  confetti.start(2000);
 
   winCombo.forEach(sqIdx => {
     boardSqs[sqIdx].style.color = "#d4af37";
