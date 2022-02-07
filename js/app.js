@@ -150,6 +150,8 @@ function renderTie() {
   boardSqs.forEach(square => {
     square.style.borderColor = "#0d0";
   });
+
+  replay.style.borderColor = "#0d0";
 }
 
 init();
