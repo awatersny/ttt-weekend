@@ -47,7 +47,7 @@ function init(){
   boardSqs.forEach(square => {
     square.style.borderColor = "#2bf";
   });
-
+  replay.style.borderColor = "#2bf";
   replay.setAttribute("hidden", true);
 
 }
@@ -139,6 +139,8 @@ function renderWin( victor ) {
     boardSqs[sqIdx].style.color = "#d4af37";
     boardSqs[sqIdx].style.borderColor = "#d4af37";
   });
+
+  replay.style.borderColor = "#d4af37";
 }
 
 function renderTie() {
