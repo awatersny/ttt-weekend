@@ -38,7 +38,6 @@ section.board {
   grid-template-rows: repeat(3, 20vmin);
   grid-template-columns: repeat(3, 20vmin);
   grid-gap: 0vmin;
-  box-shadow: 0 15px 20px black;
 }
 
 div {
@@ -49,6 +48,7 @@ div {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 15px 20px black;
 }
 
 button {
