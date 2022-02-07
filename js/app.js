@@ -99,6 +99,9 @@ function handleClick(evt) {
   if (squares[parseInt(evt.target.id[2], 10)]) {
     return;
   }
+  if (isNaN(parseInt(evt.target.id[2], 10))) {
+    return;
+  }
 	// 5.4) Update the board array at the index with the value of turn.
   squares[parseInt(evt.target.id[2], 10)] = turn;
 	// 5.5) Change the turn by multiplying turn by -1 (this flips a 1 to -1, and vice-versa).
