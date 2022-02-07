@@ -26,7 +26,7 @@ const title = document.getElementById("title");
 const board = document.querySelector(".board");
 const message = document.getElementById("message");
 const boardSqs = document.querySelectorAll(".square");
-const replay = document.getElementById("replay");
+const replay = document.getElementById("reset");
 
 /*----------------------------- Event Listeners -----------------------------*/
 board.addEventListener("click", handleClick);
@@ -43,6 +43,8 @@ function init(){
     winner = null;
   // 3.2.4) Render those state variables to the page by calling a render function.
   render();
+
+  title.style.textShadow = "0 5px 10px #2bf";
 
   boardSqs.forEach(square => {
     square.style.borderColor = "#2bf";
