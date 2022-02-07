@@ -131,6 +131,8 @@ function setWinner() {
 }
 
 function renderWin( victor ) {
+  title.style.textShadow = "0 5px 10px #ffd700";
+
   message.textContent = `${victor} wins!`;
   message.style.textShadow = "0 5px 10px #ffd700";
   confetti.start(2000);
@@ -144,6 +146,8 @@ function renderWin( victor ) {
 }
 
 function renderTie() {
+  title.style.textShadow = "0 5px 10px #0d0";
+
   message.textContent = `It's a tie!`;
   message.style.textShadow = "0 5px 10px #0f0";
 
